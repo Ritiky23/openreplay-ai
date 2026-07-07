@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openreplay-ai"
+version = "0.1.0"
+description = "A 100% local, offline observer and devtools dashboard for AI agents and LLM applications."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.20.0",
+    "pydantic>=2.0.0"
+]
+
+[project.scripts]
+openreplay = "openreplay_ai.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["openreplay_ai*"]
+exclude = ["examples*", "tests*"]
+
+[tool.setuptools.package-data]
+openreplay_ai = ["dashboard/dist/**/*", "dashboard/dist/*"]
