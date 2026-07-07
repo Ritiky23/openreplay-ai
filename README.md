@@ -1,5 +1,7 @@
 # OpenReplay AI Studio (Local Edition)
 
+[![PyPI version](https://badge.fury.io/py/openreplay-ai.svg)](https://pypi.org/project/openreplay-ai/)
+
 OpenReplay AI Studio is a 100% local, offline, developer-first session replay, execution tracing, and profiling dashboard for LLM applications and AI agents. It runs entirely on your local machine with **zero cloud dependencies, zero data leakage, and zero hosting costs**.
 
 Think of it as **Chrome DevTools + SQLite + cProfile** custom-tuned for AI workflows.
@@ -18,13 +20,20 @@ Think of it as **Chrome DevTools + SQLite + cProfile** custom-tuned for AI workf
 
 ## 📦 Installation
 
-To install and build the package locally:
+Install the package directly from PyPI:
 
 ```bash
-# Clone the repository
-cd AIReplay
+pip install openreplay-ai
+```
 
-# Install package in editable/development mode
+### Development setup (cloning and local editable mode):
+
+```bash
+# Clone the repository and navigate to folder
+git clone https://github.com/Ritiky23/openreplay-ai.git
+cd openreplay-ai
+
+# Install in development mode
 pip install -e .
 ```
 
